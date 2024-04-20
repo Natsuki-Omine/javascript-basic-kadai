@@ -1,11 +1,12 @@
 // 日付を取得する関数を定義
 const getDate = () => {
-    // Dateオブジェクト
-    const date1 = new Date(Date.UTC(2023, 7, 22));
+    const today = new Date;
 
-    // toLocaleDateString() メソッド
-    const options = { year: 'numeric', month: 'long', day: 'numeric',};
-    console.log(date1.toLocaleDateString(undefined, options));
+    const year = today.getFullYear();
+    const month = today.getMonth() + 1;
+    const date = today.getDate();
+    
+    console.log(year + '年' + month + '月' + date + '日');
 }
 
 // 関数の呼び出し
